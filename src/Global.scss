@@ -1,0 +1,56 @@
+@font-face {
+    font-family: "GrandRegular";
+    src: url("../public/assets/fonts/CyGrotesk-GrandRegular.woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "GrandBold";
+    src: url("../public/assets/fonts/CyGrotesk-GrandBold.woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "KeyRegular";
+    src: url("../public/assets/fonts/CyGrotesk-KeyRegular.woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "KeyBold";
+    src: url("../public/assets/fonts/CyGrotesk-KeyBold.woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+// font family
+$headersFont: "GrandBold";
+$subHeadersFont: "KeyRegular";
+$textFonts: "Raleway", sans-serif;
+$mainColor: #3142db;
+
+// font size
+$factor: 2;
+$headersFS: calc(37px * $factor);
+$titleFS: calc(15px * $factor);
+$subHeadersFS: calc(13px * $factor);
+$textFS: calc(12px * $factor);
+$projectsFS: calc(11.5px * $factor);
+$coursesFS: calc(10px * $factor);
+$notesFS: calc(8.5px * $factor);
+// font weight
+$textWeightReg: 500;
+$textWeightBold: 800;
+
+// elemnts width
+$factor2: 2;
+$pageWidth: calc(2480px / $factor2);
+$pageHeight: calc(3508px / $factor2);
+$lineWidth: 2px;
+$icon: 50px;
+$iconContacts: 25px;
+$filler: 30px;
+
+// margins
+$sectionsMarginBot: 50px;
+$sideMarginBot: 60px;

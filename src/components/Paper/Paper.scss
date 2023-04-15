@@ -1,0 +1,283 @@
+@import "../../Global.scss";
+
+* {
+    font-family: $textFonts;
+}
+
+a {
+    color: $mainColor;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+.Paper {
+    -webkit-box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.33);
+    -moz-box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.33);
+    box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.33);
+    padding: 100px;
+    width: $pageWidth;
+    height: $pageHeight;
+    margin: 50px;
+}
+
+@media print {
+    .Paper {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        page-break-before: always;
+        margin: auto;
+        width: 100%;
+    }
+    html {
+        zoom: 95%;
+    }
+    body {
+        width: $pageWidth;
+    }
+}
+
+.Name {
+    max-width: 300px;
+    font-size: $headersFS;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-bottom: 40px;
+    span {
+        font-family: $headersFont;
+        &:first-child {
+            color: $mainColor;
+        }
+    }
+    .title {
+        font-family: $headersFont;
+        max-width: 300px;
+        font-size: $titleFS;
+        text-transform: uppercase;
+        line-height: 1;
+        letter-spacing: 1px;
+        padding: 2px;
+        margin: 10px 0;
+        color: $mainColor;
+    }
+}
+
+.Objective,
+.Work,
+.Education,
+.Training,
+.Personal {
+    margin-bottom: $sectionsMarginBot;
+    .header {
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        color: $mainColor;
+        font-size: $subHeadersFS;
+        font-family: $subHeadersFont;
+    }
+    .content {
+        display: flex;
+        .icons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .icon {
+                background-color: $mainColor;
+                padding: 10px;
+                width: $icon;
+                height: $icon;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                color: white;
+                margin-bottom: 20px;
+                svg {
+                    font-size: calc($icon - 15px);
+                    font-weight: bold;
+                }
+            }
+            img {
+                width: $icon;
+                height: $icon;
+                margin-bottom: 20px;
+            }
+            .filler {
+                width: $icon;
+                height: $filler;
+                // margin-bottom: 10px;
+            }
+            .line {
+                height: 100%;
+                width: $lineWidth;
+                background-color: $mainColor;
+            }
+        }
+        .desc {
+            padding: 10px 0 0 15px;
+            font-size: $textFS;
+            font-weight: $textWeightReg;
+        }
+    }
+}
+
+.Work {
+    .exp {
+        h3 {
+            font-size: $textFS;
+            font-weight: $textWeightBold;
+            &:nth-child(2) {
+                color: $mainColor;
+            }
+        }
+        ul {
+            margin-bottom: 30px;
+            li {
+                font-size: $textFS;
+                &:first-child {
+                    font-weight: $textWeightBold;
+                }
+                &:not(:first-child) {
+                    font-weight: $textWeightReg;
+                }
+                &:last-child {
+                    color: $mainColor;
+                }
+            }
+        }
+    }
+}
+
+.Education {
+    .desc {
+        .edu {
+            h3 {
+                font-weight: $textWeightBold;
+                font-size: $textFS;
+                &:nth-child(2) {
+                    color: $mainColor;
+                }
+            }
+            ul {
+                li {
+                    font-size: $textFS;
+                }
+            }
+        }
+    }
+}
+
+.Training {
+    ul {
+        li {
+            span {
+                display: block;
+                &:first-child {
+                    font-size: $textFS;
+                    font-weight: $textWeightBold;
+                }
+                &:nth-child(2) {
+                    font-size: $coursesFS;
+                }
+            }
+        }
+    }
+}
+
+.Personal {
+    ul {
+        li {
+            font-weight: $textWeightBold;
+            font-size: $textFS;
+        }
+    }
+}
+
+.Contacts,
+.Technical,
+.Interpersonal,
+.languageSkills,
+.Projects {
+    margin-bottom: $sideMarginBot;
+    h3 {
+        &:first-of-type {
+            color: $mainColor;
+            font-family: $subHeadersFont;
+            font-size: $subHeadersFS;
+            text-transform: uppercase;
+        }
+    }
+}
+.Contacts {
+    .contact {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .icon {
+            height: $iconContacts;
+            width: $iconContacts;
+            display: flex;
+            margin-inline-end: 10px;
+        }
+        a {
+            color: black;
+            padding: 0;
+            margin: 0;
+            font-size: $textFS;
+        }
+    }
+}
+
+.Technical {
+    li {
+        font-size: $textFS;
+        font-weight: $textWeightReg;
+    }
+}
+
+.Interpersonal {
+    p {
+        font-size: $textFS;
+        font-weight: $textWeightReg;
+    }
+}
+.languageSkills {
+    ul {
+        li {
+            font-size: $textFS;
+            font-weight: $textWeightReg;
+        }
+    }
+}
+
+.Projects {
+    .notes {
+        font-size: $notesFS;
+        font-weight: $textWeightReg;
+        margin-bottom: 10px;
+    }
+    ul {
+        h4 {
+            color: black;
+            font-size: $projectsFS;
+            font-weight: $textWeightBold;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            font-size: $projectsFS;
+            margin-bottom: 25px;
+            font-weight: $textWeightReg;
+
+            a {
+                color: $mainColor;
+            }
+            div {
+                display: flex;
+                width: 300px;
+            }
+        }
+    }
+}
