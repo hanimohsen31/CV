@@ -1,32 +1,23 @@
 import React from "react";
+import { Data as data } from "../../store/Data";
 
 export const Work = (props) => {
-  let data = props.Data;
-  let work = data.WorkExperience;
+  const slice = props.slice
   return (
-    <div className="Work">
-      <div className="header">Work Experience</div>
-      <div className="content">
-        <div className="icons">
-          <img src="assets/images/circle.png" alt="" />
-          <div className="line"></div>
-        </div>
-        <div className="desc">
-          {work.map((elm, index) => {
-            return (
-              <div key={index} className="exp">
-                <h3>{elm.title}</h3>
-                <h3>{elm.comp}</h3>
-                <ul>
-                  <li>{elm.time}</li>
-                  <li>{elm.desc}</li>
-                  <li>{elm.period}</li>
-                </ul>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    </div>
+    <>
+      {data.WorkExperience.map((elm, index) => {
+        return (
+          <div key={index}>
+            <h3>{elm.title}</h3>
+            <h3>{elm.comp}</h3>
+            <ul>
+              {elm.time ? <li>{elm.time}</li> : null}
+              {elm.desc ? <li>{elm.desc}</li> : null}
+              {elm.period ? <li>{elm.period}</li> : null}
+            </ul>
+          </div>
+        );
+      }).slice(slice[0], slice[1])}
+    </>
   );
 };

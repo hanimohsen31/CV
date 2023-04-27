@@ -2,7 +2,10 @@ export const Data = {
   name: "Hani Mohsen",
   title: "front-end developer",
   objective:
-    "ITI Full Stack Development Using Python track graduate. I am looking to obtain a responsible and challenging Front End Developer position where my education and work experience will have valuable application.",
+    // "ITI Full Stack Development Using Python track graduate. I am looking to obtain a responsible and challenging Front End Developer position where my education and work experience will have valuable application.",
+    "To obtain a challenging position as a junior front-end developer utilizing my proficiency in Angular and React.js to contribute to the development of user-friendly and responsive web applications. With a strong foundation in HTML, CSS, and JavaScript, I am committed to developing efficient, maintainable, and scalable code while continuously learning and adapting to new technologies and industry trends.",
+  personal:
+    "A Junior front-end developer with 3 years of experience in web development using React.js and Angular. Strong knowledge of building responsive, user-friendly web applications considering best practices and SEO. Always Keeping myself up-to-date with the latest technologies and industry trends.",
   //    work exp
   WorkExperience: [
     {
@@ -10,7 +13,28 @@ export const Data = {
       comp: "GET Group Holdings Ltd.",
       time: "Full Time",
       desc: "A UI Developer using HTML, CSS, SCSS, and Bootstrap for Angular Projects.",
-      period: "September 2022 till Now",
+      period: "September 2022 till Now | 1 year",
+    },
+    {
+      title: "Full Stack Web Development using Python",
+      comp: "Information Technology Institute (ITI)",
+      time: "Internship",
+      desc: "Full Stack Developer using React.js and Django.",
+      period: "August 2022 - December 2022 | 3 Months",
+    },
+    {
+      title: "Interior Designer",
+      comp: "Freelancer",
+      time: "Part Time",
+      desc: "3d Visualizer for Residential and Commercial Projects using 3ds Max, V-ray, Corona, AutoCAD, and Photoshop.",
+      period: "June 2021 - September 2022 | 2 years",
+    },
+    {
+      title: "Interior Designer",
+      comp: "Sketch Company ",
+      time: "Part Time",
+      desc: "Interior Designer for Residential and Commercial Projects.",
+      period: "Part Time| April 2020 - June 2020 | 3 Months",
     },
     {
       title: "Technical Office Engineer ",
@@ -20,18 +44,11 @@ export const Data = {
       period: "September 2019 -June 2021 ",
     },
     {
-      title: "Interior Designer",
-      comp: "Sketch Company ",
-      time: "Part Time",
-      desc: "Interior Designer for Residential and Commercial Projects.",
-      period: "January 2020 – April 2020",
-    },
-    {
       title: "Site Engineer",
       comp: "Skyline for décor and interior ",
       time: "Full Time",
       desc: "Site Engineer for implementations of Interior Design works.",
-      period: "November 2018 – June 2019",
+      period: "November 2018 - June 2019 | 8 Months",
     },
   ],
   //   Education
@@ -40,7 +57,7 @@ export const Data = {
       lic: "Full Stack Web Development using Python",
       desc: "Information Technology Institute (ITI) - Mansoura Branch",
       details: [
-        "Intensive Code Camp Aug 2021 - Dec 2022",
+        "Intensive Code Camp Aug 2022 - Dec 2022",
         "Graduation project: Netflix Cloning (React and Django).",
       ],
     },
@@ -48,7 +65,7 @@ export const Data = {
       lic: "B.S Degree in Engineering Mansoura University.",
       desc: "",
       details: [
-        "From Sep 2013 to June 2018 ",
+        "From Sep 2013 to June 2018",
         "Grade: Good",
         "Graduation project: Structural Analysis for mid-level Towers.",
       ],
@@ -123,7 +140,7 @@ export const Data = {
     {
       name: "Dashboard using Angular",
       code: "https://github.com/hanimohsen31/Dashboard-Angular",
-      deployment: "https://dashboard-angular-300.web.app/login",
+      deployment: "https://dashboard-angular-300.web.app/",
     },
     {
       name: "E-Commerce Web app with Angular",
@@ -132,23 +149,23 @@ export const Data = {
     },
     {
       name: "Dashboard using React",
-      code: "https://github.com/hanimohsen31/Angular-Ecommerce",
+      code: "https://github.com/hanimohsen31/React-Dashboard",
       deployment: "https://react-dashboard-300.web.app/",
     },
     {
       name: "E-Commerce Web app with React",
-      code: "",
-      deployment: "",
+      code: "https://github.com/hanimohsen31/E-CommerceApp",
+      deployment: "https://reactcourse-babcb.web.app/",
     },
     {
       name: "Netflix Cloning (Using React and Django)",
       code: "https://github.com/hanimohsen31/Netflix-V.4-AIO",
-      deployment: "",
+      deployment: null,
     },
     {
       name: "Netflix Cloning (Using Flask only)",
       code: "https://github.com/hanimohsen31/CS50-Netflix-Flask",
-      deployment: "",
+      deployment: null,
     },
     {
       name: "Personal Website",
@@ -158,10 +175,10 @@ export const Data = {
     {
       name: "Personal Portfolio",
       code: "https://github.com/hanimohsen31/Portofolio",
-      deployment: "https://delicate-marshmallow-bfac5b.netlify.app/",
+      deployment: "https://portfolio-300.web.app/",
     },
     {
-      name: "Halla Travel",
+      name: "Halla-Travel",
       code: "https://github.com/hanimohsen31/Halla-Travil",
       deployment: "https://hanimohsen31.github.io/Halla-Travil/",
     },
@@ -172,8 +189,20 @@ export const Data = {
     },
   ],
   PersonalInfo: [
-    "Address 1: Mansoura city, Dakahila – Egypt",
+    "Address 1: Mansoura city, Dakahila - Egypt",
     "Address 2: El-Nozha, Cairo",
     "Military Status: Exempted",
   ],
+
+  TechnicalSkillsExplained: [
+    "Proficient in HTML and CSS for creating responsive and visually appealing front-end interfaces.",
+    "Experience with SCSS and Bootstrap for faster and more efficient styling and layout.",
+    "Strong knowledge of JavaScript and TypeScript for creating interactive web applications.",
+    "Good knowledge in React.js and Angular for building scalable and modular front-end components.",
+    "Very good coding skills with a focus on clean, maintainable, and efficient code.",
+    "Knowledge of search engine optimization (SEO) techniques for optimizing web content and improving search engine rankings.",
+    "Experience with integrating third-party APIs and services for added functionality and features.",
+  ],
+  InterpersonalSkillsExplained:
+    "The ability to work independently and in a team, take ownership of tasks, deliver quality work within deadlines. Also flexible and able to find creative and efficient solutions to complex technical challenges.",
 };

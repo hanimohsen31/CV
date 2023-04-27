@@ -1,17 +1,5 @@
 @import "../../Global.scss";
 
-* {
-    font-family: $textFonts;
-}
-
-a {
-    color: $mainColor;
-}
-
-ul {
-    padding-left: 20px;
-}
-
 .Paper {
     -webkit-box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.33);
     -moz-box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.33);
@@ -20,6 +8,15 @@ ul {
     width: $pageWidth;
     height: $pageHeight;
     margin: 50px;
+    position: relative;
+    .counter{
+        position: absolute;
+        bottom: 40px;
+        right: 50px;
+        opacity: .8;
+        font-size: 16pt;
+        font-weight: 500;
+    }
 }
 
 @media print {
@@ -40,20 +37,19 @@ ul {
 }
 
 .Name {
-    max-width: 300px;
+    @include flex(s, s, c);
+    // max-width: 300px;
     font-size: $headersFS;
     text-transform: uppercase;
     line-height: 1;
     margin-bottom: 40px;
     span {
         font-family: $headersFont;
-        &:first-child {
-            color: $mainColor;
-        }
+        // color: $mainColor;
     }
     .title {
         font-family: $headersFont;
-        max-width: 300px;
+        // max-width: 300px;
         font-size: $titleFS;
         text-transform: uppercase;
         line-height: 1;
@@ -64,59 +60,36 @@ ul {
     }
 }
 
-.Objective,
-.Work,
-.Education,
-.Training,
-.Personal {
+.Section {
     margin-bottom: $sectionsMarginBot;
     .header {
-        text-transform: uppercase;
         margin-bottom: 20px;
         color: $mainColor;
         font-size: $subHeadersFS;
         font-family: $subHeadersFont;
+        text-transform: uppercase;
     }
-    .content {
+    .body {
         display: flex;
-        .icons {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            .icon {
-                background-color: $mainColor;
-                padding: 10px;
-                width: $icon;
-                height: $icon;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-radius: 50%;
-                color: white;
-                margin-bottom: 20px;
-                svg {
-                    font-size: calc($icon - 15px);
-                    font-weight: bold;
-                }
-            }
+        .sideLineAndIcons {
+            @include flex(s, c, c);
+            margin-inline-end: 20px;
             img {
                 width: $icon;
                 height: $icon;
                 margin-bottom: 20px;
-            }
-            .filler {
-                width: $icon;
-                height: $filler;
-                // margin-bottom: 10px;
             }
             .line {
                 height: 100%;
                 width: $lineWidth;
                 background-color: $mainColor;
             }
+            .filler {
+                width: $icon;
+                height: $filler;
+            }
         }
-        .desc {
-            padding: 10px 0 0 15px;
+        .content {
             font-size: $textFS;
             font-weight: $textWeightReg;
         }
@@ -124,34 +97,31 @@ ul {
 }
 
 .Work {
-    .exp {
-        h3 {
-            font-size: $textFS;
-            font-weight: $textWeightBold;
-            &:nth-child(2) {
-                color: $mainColor;
-            }
+    h3 {
+        font-size: $textFS;
+        font-weight: $textWeightBold;
+        &:nth-child(2) {
+            color: $mainColor;
         }
-        ul {
-            margin-bottom: 30px;
-            li {
-                font-size: $textFS;
-                &:first-child {
-                    font-weight: $textWeightBold;
-                }
-                &:not(:first-child) {
-                    font-weight: $textWeightReg;
-                }
-                &:last-child {
-                    color: $mainColor;
-                }
+    }
+    ul {
+        margin-bottom: 30px;
+        li {
+            font-size: $textFS;
+            &:first-child {
+                font-weight: $textWeightBold;
+            }
+            &:not(:first-child) {
+                font-weight: $textWeightReg;
+            }
+            &:last-child {
+                color: $mainColor;
             }
         }
     }
 }
 
 .Education {
-    .desc {
         .edu {
             h3 {
                 font-weight: $textWeightBold;
@@ -166,7 +136,6 @@ ul {
                 }
             }
         }
-    }
 }
 
 .Training {
@@ -197,7 +166,6 @@ ul {
 
 .Contacts,
 .Technical,
-.Interpersonal,
 .languageSkills,
 .Projects {
     margin-bottom: $sideMarginBot;
@@ -210,6 +178,7 @@ ul {
         }
     }
 }
+
 .Contacts {
     .contact {
         display: flex;
@@ -237,12 +206,6 @@ ul {
     }
 }
 
-.Interpersonal {
-    p {
-        font-size: $textFS;
-        font-weight: $textWeightReg;
-    }
-}
 .languageSkills {
     ul {
         li {
@@ -270,7 +233,6 @@ ul {
             font-size: $projectsFS;
             margin-bottom: 25px;
             font-weight: $textWeightReg;
-
             a {
                 color: $mainColor;
             }

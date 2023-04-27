@@ -1,10 +1,4 @@
 @font-face {
-    font-family: "GrandRegular";
-    src: url("../public/assets/fonts/CyGrotesk-GrandRegular.woff2");
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
     font-family: "GrandBold";
     src: url("../public/assets/fonts/CyGrotesk-GrandBold.woff2");
     font-weight: normal;
@@ -13,12 +7,6 @@
 @font-face {
     font-family: "KeyRegular";
     src: url("../public/assets/fonts/CyGrotesk-KeyRegular.woff2");
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: "KeyBold";
-    src: url("../public/assets/fonts/CyGrotesk-KeyBold.woff2");
     font-weight: normal;
     font-style: normal;
 }
@@ -54,3 +42,54 @@ $filler: 30px;
 // margins
 $sectionsMarginBot: 50px;
 $sideMarginBot: 60px;
+
+@mixin flex($justify, $align, $direction) {
+    display: flex;
+    // justify
+    @if $justify == s {
+        justify-content: flex-start;
+    } @else if $justify == c {
+        justify-content: center;
+    } @else if $justify == e {
+        justify-content: flex-end;
+    } @else if $justify == sb {
+        justify-content: space-between;
+    } @else if $justify == sa {
+        justify-content: space-around;
+    } @else if $justify == se {
+        justify-content: space-evenly;
+    }
+    // align
+    @if $align == s {
+        align-items: flex-start;
+    } @else if $align == c {
+        align-items: center;
+    } @else if $align == e {
+        align-items: flex-end;
+    }
+    // align
+    @if $direction == c {
+        flex-direction: column;
+    } @else if $direction == cr {
+        flex-direction: column-reverse;
+    } @else if $direction == r {
+        flex-direction: row;
+    } @else if $direction == rw {
+        flex-direction: row-reverse;
+    }
+}
+
+* {
+    font-family: $textFonts;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: $mainColor;
+}
+
+ul {
+    padding-left: 20px;
+}

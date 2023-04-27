@@ -1,7 +1,7 @@
 import React from "react";
+import { Data as data} from "../../store/Data";
 
-export const Contacts = (props) => {
-  let data = props.Data;
+export const Contacts = () => {
   let contacts = data.Contacts;
   return (
     <div className="Contacts">
