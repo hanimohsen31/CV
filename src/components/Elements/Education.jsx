@@ -1,10 +1,10 @@
 import React from "react";
-import { Data as data } from "../../store/Data";
 
-export const Education = () => {
+export const Education = (props) => {
+  let data = props.data;
   return (
     <>
-      {data.Education.map((elm, index) => {
+      {data?.map((elm, index) => {
         return (
           <div key={index} className="edu">
             <h3>{elm.lic}</h3>

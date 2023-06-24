@@ -5,7 +5,7 @@ export const Data = {
     // "ITI Full Stack Development Using Python track graduate. I am looking to obtain a responsible and challenging Front End Developer position where my education and work experience will have valuable application.",
     "To obtain a challenging position as a junior front-end developer utilizing my proficiency in Angular and React.js to contribute to the development of user-friendly and responsive web applications. With a strong foundation in HTML, CSS, and JavaScript, I am committed to developing efficient, maintainable, and scalable code while continuously learning and adapting to new technologies and industry trends.",
   personal:
-    "A Junior front-end developer with 3 years of experience in web development using React.js and Angular. Strong knowledge of building responsive, user-friendly web applications considering best practices and SEO. Always Keeping myself up-to-date with the latest technologies and industry trends.",
+    "A Junior front-end developer with 2 years of experience in web development using React.js and Angular. Strong knowledge of building responsive, user-friendly web applications considering best practices and SEO. Always Keeping myself up-to-date with the latest technologies and industry trends.",
   //    work exp
   WorkExperience: [
     {
@@ -74,6 +74,22 @@ export const Data = {
   //   courses
   Courses: [
     {
+      course: "RxJS in Angular- Reactive Development",
+      details: "Pluralsight - Deborah Kurata (June 2023)",
+    },
+    {
+      course: "Angular Forms",
+      details: "Pluralsight - Mark Zamoyta (June 2023)",
+    },
+    {
+      course: "The Complete Angular Course: Beginner to Advanced",
+      details: "Udemy - Mosh Hamedani (Feb 2023)",
+    },
+    {
+      course: "Angular Front-end Course",
+      details: "Route Academy (Nov 2022)",
+    },
+    {
       course: "React - The Complete Guide (incl Hooks, React Router, Redux)",
       details: "Udemy - Maximilian Schwarzmüller (June 2022)",
     },
@@ -104,12 +120,12 @@ export const Data = {
     {
       icon: "assets/images/email.svg",
       title: "hanimohsen31@gmail.com",
-      link: "mailto: hanimohsen31@gmail.com",
+      // link: "mailto: hanimohsen31@gmail.com",
     },
     {
       icon: "assets/images/telephoone.svg",
       title: "+201116886029",
-      link: "tel:+201116886029",
+      // link: "tel:+201116886029",
     },
     {
       icon: "assets/images/github.png",
@@ -137,6 +153,17 @@ export const Data = {
   languageSkills: ["Arabic", "English"],
   //   projects
   Projects: [
+    {
+      name: 'Cras Import : "استيراد سيارات المصريين بالخارج"',
+      // code: "https://github.com/hanimohsen31/Dashboard-Angular",
+      // deployment: "https://dashboard-angular-300.web.app/",
+    },
+    {
+      name: "Cop 27",
+      // code: "https://github.com/hanimohsen31/Dashboard-Angular",
+      // deployment: "https://cop27.eg/",
+      website: "https://cop27.eg/",
+    },
     {
       name: "Dashboard using Angular",
       code: "https://github.com/hanimohsen31/Dashboard-Angular",
@@ -190,7 +217,7 @@ export const Data = {
   ],
   PersonalInfo: [
     "Address 1: Mansoura city, Dakahila - Egypt",
-    "Address 2: El-Nozha, Cairo",
+    "Address 2: Hadayeq El-Maadi, Cairo",
     "Military Status: Exempted",
   ],
 

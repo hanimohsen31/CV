@@ -9,30 +9,13 @@
     height: $pageHeight;
     margin: 50px;
     position: relative;
-    .counter{
+    .counter {
         position: absolute;
         bottom: 40px;
         right: 50px;
-        opacity: .8;
+        opacity: 0.8;
         font-size: 16pt;
         font-weight: 500;
-    }
-}
-
-@media print {
-    .Paper {
-        -webkit-box-shadow: none;
-        -moz-box-shadow: none;
-        box-shadow: none;
-        page-break-before: always;
-        margin: auto;
-        width: 100%;
-    }
-    html {
-        zoom: 95%;
-    }
-    body {
-        width: $pageWidth;
     }
 }
 
@@ -122,20 +105,20 @@
 }
 
 .Education {
-        .edu {
-            h3 {
-                font-weight: $textWeightBold;
-                font-size: $textFS;
-                &:nth-child(2) {
-                    color: $mainColor;
-                }
-            }
-            ul {
-                li {
-                    font-size: $textFS;
-                }
+    .edu {
+        h3 {
+            font-weight: $textWeightBold;
+            font-size: $textFS;
+            &:nth-child(2) {
+                color: $mainColor;
             }
         }
+        ul {
+            li {
+                font-size: $textFS;
+            }
+        }
+    }
 }
 
 .Training {
@@ -190,7 +173,8 @@
             display: flex;
             margin-inline-end: 10px;
         }
-        a {
+        a,
+        span {
             color: black;
             padding: 0;
             margin: 0;
@@ -242,4 +226,29 @@
             }
         }
     }
+}
+
+@media print {
+    .Paper {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        page-break-before: always;
+        margin: 0 !important;
+        width: 100%;
+    }
+    html {
+        zoom: 95%;
+        margin: 0 !important;
+    }
+    body {
+        margin: 0px !important;
+        width: $pageWidth;
+    }
+}
+
+@page {
+    zoom: 95%;
+    size: auto; /* auto is the initial value */
+    margin: 0mm !important; /* this affects the margin in the printer settings */
 }

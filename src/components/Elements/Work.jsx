@@ -1,11 +1,12 @@
 import React from "react";
-import { Data as data } from "../../store/Data";
 
 export const Work = (props) => {
   const slice = props.slice
+  let data = props.data
+
   return (
     <>
-      {data.WorkExperience.map((elm, index) => {
+      {data?.map((elm, index) => {
         return (
           <div key={index}>
             <h3>{elm.title}</h3>

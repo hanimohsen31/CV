@@ -1,18 +1,18 @@
 import React from "react";
-import { Data as data} from "../../store/Data";
 
-export const Contacts = () => {
-  let contacts = data.Contacts;
+export const Contacts = (props) => {
+  let data = props.data;
   return (
     <div className="Contacts">
       <h3>Contacts</h3>
-      {contacts.map((elm,index) => {
+      {data?.map((elm, index) => {
         return (
           <div key={index} className="contact">
             <div className="icon">
               <img src={elm.icon} alt="" />
             </div>
-            <a href={elm.link}>{elm.title}</a>
+            {elm.link && <a href={elm.link}>{elm.title}</a>}
+            {!elm.link && <span>{elm.title}</span>}
           </div>
         );
       })}

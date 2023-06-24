@@ -1,12 +1,12 @@
 import React from "react";
-import { Data as data} from "../../store/Data";
 
-export const Technical = () => {
+export const Technical = (props) => {
+  let data = props.data
   return (
     <div className="Technical">
       <h3>Technical Skills</h3>
       <ul>
-        {data.TechnicalSkills.map((elm, index) => {
+        {data?.map((elm, index) => {
           return <li key={index}>{elm}</li>;
         })}
       </ul>

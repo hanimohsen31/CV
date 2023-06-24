@@ -1,13 +1,12 @@
 import React from "react";
-import { Data as data } from "../../store/Data";
 
-export const Projects = () => {
-  let projects = data.Projects;
+export const Projects = (props) => {
+  let data = props.data
   return (
     <div className="Projects">
       <h3>Projects</h3>
       <ul>
-        {projects.map((elm, index) => {
+        {data?.map((elm, index) => {
           return (
             <li key={index}>
               <h4>{elm.name}</h4>
@@ -15,6 +14,11 @@ export const Projects = () => {
                 {elm.code && (
                   <a href={elm.code} target="_blank" rel="noreferrer">
                     Project Code
+                  </a>
+                )}
+                {elm.website && (
+                  <a href={elm.website} target="_blank" rel="noreferrer">
+                    Visit Website
                   </a>
                 )}
                 {elm.deployment && (

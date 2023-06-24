@@ -1,9 +1,10 @@
 import React from "react";
-import { Data as data } from "../../store/Data";
+
 export const Training = (props) => {
+  let data = props.data
   return (
     <ul>
-      {data.Courses.map((elm, index) => {
+      {data?.map((elm, index) => {
         return (
           <li key={index}>
             <span>{elm.course}</span>
