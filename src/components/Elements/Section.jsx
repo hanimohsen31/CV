@@ -8,7 +8,7 @@ export const Section = (props) => {
   return (
     <div className={"Section " + props.class}>
       <div className="header">{props.title}</div>
-      <div className="body">
+      <div className={"body " + props.bodyClass}>
         <div className="sideLineAndIcons">
           {props.img === "filler" && <div className="filler"></div>}
           {props.img !== "filler" && <img src={img} alt="" />}

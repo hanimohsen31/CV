@@ -47,7 +47,7 @@ function App() {
   };
 
   const printPage = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     window.print();
   };
 
@@ -80,8 +80,23 @@ function App() {
                   content={data?.personal}
                   img="location"
                 />
-                <Section title="Work Experience" img="circle" class="Work">
+                {/* <Section title="Work Experience" img="circle" class="Work">
                   <Work slice={[0, 4]} data={data?.WorkExperience} />
+                </Section> */}
+                <Section title="Technical Skills" img="location">
+                  <ul>
+                    {data?.TechnicalSkillsExplained?.map((elm, index) => {
+                      return <li key={index}>{elm}</li>;
+                    })}
+                  </ul>
+                </Section>
+                {/* <Section
+                  title="Soft Skills"
+                  content={data?.InterpersonalSkillsExplained}
+                  img="filler"
+                /> */}
+                <Section title="Education" class="Education w-100" bodyClass="w-900px" img="location">
+                  <Education data={data?.Education} />
                 </Section>
               </div>
               <div className={`col-${sideSec} py-3`}>
@@ -97,21 +112,27 @@ function App() {
           <Paper counter="2">
             <div className="row justify-content-between">
               <div className={`col-${mainSec}`}>
-                <Section title="Work Experience" img="circle" class="Work">
+                {/* <Section title="Education" class="Education" img="location">
+                  <Education data={[data?.Education[1]]} />
+                </Section> */}
+                {/* <Section title="Work Experience" img="circle" class="Work">
                   <Work slice={[5]} data={data?.WorkExperience} />
+                </Section> */}
+                <Section title="Work Experience" img="circle" class="Work">
+                  <Work slice={[0, 5]} data={data?.WorkExperience} />
                 </Section>
-                <Section title="Technical Skills" img="location">
+                {/* <Section title="Technical Skills" img="location">
                   <ul>
                     {data?.TechnicalSkillsExplained?.map((elm, index) => {
                       return <li key={index}>{elm}</li>;
                     })}
                   </ul>
-                </Section>
-                <Section
+                </Section> */}
+                {/* <Section
                   title="Soft Skills"
                   content={data?.InterpersonalSkillsExplained}
                   img="filler"
-                />
+                /> */}
               </div>
               <div className={`col-${sideSec} py-3`}>
                 <Projects data={data?.Projects} />
@@ -122,9 +143,14 @@ function App() {
           {/* --------------------------------------------------------------- */}
           {/* paper 3 */}
           <Paper counter="3">
-            <Section title="Education" class="Education" img="location">
+            {/* <Section title="Education" class="Education" img="location">
               <Education data={data?.Education} />
-            </Section>
+            </Section> */}
+            <Section
+              title="Soft Skills"
+              content={data?.InterpersonalSkillsExplained}
+              img="filler"
+            />
             <Section title="Training And Courses" class="Training" img="filler">
               <Training data={data?.Courses} />
             </Section>

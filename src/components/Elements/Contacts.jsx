@@ -11,7 +11,7 @@ export const Contacts = (props) => {
             <div className="icon">
               <img src={elm.icon} alt="" />
             </div>
-            {elm.link && <a href={elm.link}>{elm.title}</a>}
+            {elm.link && <a href={elm.link} target="_blank" rel="noreferrer">{elm.title}</a>}
             {!elm.link && <span>{elm.title}</span>}
           </div>
         );
