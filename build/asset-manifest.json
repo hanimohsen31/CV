@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.52d71a7c.css",
-    "main.js": "/static/js/main.75a937e9.js",
+    "main.js": "/static/js/main.8b61393a.js",
     "static/media/CyGrotesk-GrandBold.woff2": "/static/media/CyGrotesk-GrandBold.49cd2ffddb96f5a63a3c.woff2",
     "static/media/CyGrotesk-KeyRegular.woff2": "/static/media/CyGrotesk-KeyRegular.8c78fad3851e8454e999.woff2",
     "index.html": "/index.html",
     "main.52d71a7c.css.map": "/static/css/main.52d71a7c.css.map",
-    "main.75a937e9.js.map": "/static/js/main.75a937e9.js.map"
+    "main.8b61393a.js.map": "/static/js/main.8b61393a.js.map"
   },
   "entrypoints": [
     "static/css/main.52d71a7c.css",
-    "static/js/main.75a937e9.js"
+    "static/js/main.8b61393a.js"
   ]
 }

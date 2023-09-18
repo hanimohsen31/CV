@@ -15,7 +15,7 @@ function App() {
   let sideSec = 4;
   const [data, setData] = useState();
   const [textArea, setTextArea] = useState();
-  let url = "https://tests-300-default-rtdb.firebaseio.com/cv.json";
+  let url = "https://cv-react-300-default-rtdb.firebaseio.com/cv.json";
 
   useEffect(() => {
     getDataRequest();
